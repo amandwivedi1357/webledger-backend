@@ -2,7 +2,7 @@ const connection=require("./db/db")
 const  express=require("express") ;
 const cors=require("cors");
 const { usersRouter } = require("./routes/userRoutes");
-const { Favrouter } = require("./routes/favRoutes");
+
 
 const app=express();
 require("dotenv").config();
@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 require("dotenv").config();
 app.use("/users",usersRouter)
-app.use("/recipes",Favrouter)
+
 
 
 app.get("/", (req, res) => {
