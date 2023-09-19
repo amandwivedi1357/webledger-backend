@@ -18,12 +18,12 @@ app.get("/", (req, res) => {
     
   });
 
-app.listen(process.env.PORT,async()=>{
+app.listen(process.env.port,async()=>{
     try {
         await connection;
         console.log("connected to DB");
       } catch (err) {
         console.log(err.message);
       }
-      console.log(`application running at ${process.env.PORT}`);
+      console.log(`application running at ${process.env.port}`);
 })
